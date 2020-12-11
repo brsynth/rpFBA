@@ -326,32 +326,39 @@ def runFBA(sbml_path, gem_sbml, outFile,
     # rpsbml_gem.writeSBML('/home/mdulac/workspace/Galaxy-SynBioCAD/rpFBA/rpFBA_image/tmp_out/')
     ####### fraction of reaction ######
     # Choose the good function according to 'sim_type' argument
-    sim_func = globals()['rp_'+sim_type]
-    obj_val,rpsbml_gem = sim_func(rpsbml_gem,
-                                  source_reaction, source_coefficient,
-                                  target_reaction, target_coefficient,
-                                  fraction_of,
-                                  is_max,
-                                  pathway_id, objective_id,
-                                  logger)
+    # sim_func = globals()['rp_'+sim_type]
+    # obj_val,rpsbml_gem = sim_func(rpsbml_gem,
+    #                               source_reaction, source_coefficient,
+    #                               target_reaction, target_coefficient,
+    #                               fraction_of,
+    #                               is_max,
+    #                               pathway_id, objective_id,
+    #                               logger)
     # ####### FBA ########
-    # elif sim_type=='fba':
-    #     obj_val,rpsbml_gem = fba(rpsbml_gem,
-    #                                   source_reaction, source_coefficient,
-    #                                   target_reaction, target_coefficient,
-    #                                   fraction_of,
-    #                                   is_max,
-    #                                   pathway_id, objective_id)
-    # ####### pFBA #######
-    # elif sim_type=='pfba':
-    #     obj_val,rpsbml_gem = pfba(rpsbml_gem,
-    #                                   source_reaction, source_coefficient,
-    #                                   target_reaction, target_coefficient,
-    #                                   fraction_of,
-    #                                   is_max,
-    #                                   pathway_id, objective_id)
-    # else:
-    #     logger.error('Cannot recognise sim_type: '+str(sim_type))
+    if sim_type == 'fraction':
+        obj_val,rpsbml_gem = rp_fraction(rpsbml_gem,
+                                         source_reaction, source_coefficient,
+                                         target_reaction, target_coefficient,
+                                         fraction_of,
+                                         is_max,
+                                         pathway_id, objective_id,
+                                         logger=logger)
+    elif sim_type == 'fba':
+        obj_val,rpsbml_gem = rp_fba(rpsbml_gem,
+                                    target_reaction, target_coefficient,
+                                    is_max,
+                                    pathway_id, objective_id,
+                                    logger=logger)
+    ####### pFBA #######
+    elif sim_type == 'pfba':
+        obj_val,rpsbml_gem = rp_pfba(rpsbml_gem,
+                                     target_reaction, target_coefficient,
+                                     fraction_of,
+                                     is_max,
+                                     pathway_id, objective_id,
+                                     logger=logger)
+    else:
+        logger.error('Cannot recognise sim_type: '+str(sim_type))
     '''
     ###### multi objective #####
     elif sim_type=='multi_fba':
