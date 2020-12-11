@@ -1,4 +1,4 @@
-{% set name = "rpcompletion" %}
+{% set name = "rpfba" %}
 {% set data = load_setup_py_data() %}
 
 package:
