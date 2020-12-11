@@ -22,6 +22,7 @@ requirements:
     - credisdict
     - requests
     - urllib3
+    - cobra
 
 test:
   source_files:
