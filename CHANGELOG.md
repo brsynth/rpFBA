@@ -1,8 +1,16 @@
 # Changelog
 
-## [0.0.1](https://github.com/brsynth/rpFBA/tree/0.0.1) (2026-04-14)
+## [6.8.2](https://github.com/brsynth/rpFBA/tree/6.8.2) (2026-04-14)
 
-[Full Changelog](https://github.com/brsynth/rpFBA/compare/aa1d2c668b2aa408376236e31923ee71ba938fc8...0.0.1)
+[Full Changelog](https://github.com/brsynth/rpFBA/compare/6.8.1...6.8.2)
+
+## [6.8.1](https://github.com/brsynth/rpFBA/tree/6.8.1) (2026-04-14)
+
+[Full Changelog](https://github.com/brsynth/rpFBA/compare/aa1d2c668b2aa408376236e31923ee71ba938fc8...6.8.1)
+
+**Merged pull requests:**
+
+- trigger [\#1](https://github.com/brsynth/rpFBA/pull/1) ([breakthewall](https://github.com/breakthewall))
 
 
 
