@@ -256,11 +256,6 @@ def runFBA(
 
         results["biomass"] = results_biomass
 
-    # print(cobra_results.objective_value)
-    # print(cobra_results.status)
-    # print(cobra_results.fluxes)
-    # print(cobra_results.shadow_prices)
-
     results[sim_type] = cobra_results
 
     # Write results for merged model
