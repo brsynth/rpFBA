@@ -13,10 +13,7 @@ from cobra.core.model import Model as cobra_model
 from cobra.core.solution import Solution as cobra_solution
 
 from rplibs import rpSBML, rpPathway
-from rplibs.cobra_format import (
-    to_cobra,
-    cobraize
-)
+from rplibs.cobra_format import to_cobra, cobraize
 from .Args import DEFAULT_ARGS as DEFAULT_RPFBA_ARGS
 
 # TODO: add the pareto frontier optimisation as an automatic way to calculate the optimal fluxes
