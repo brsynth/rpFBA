@@ -1,0 +1,8 @@
+name: rpfba
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - cobra
+  - brs_utils>=1.26.0
+  - rplibs>=6.9.3
