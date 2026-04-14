@@ -216,9 +216,6 @@ def runFBA(
     logger.debug("       fraction_coeff: " + str(fraction_coeff))
     logger.debug("       compartment_id: " + str(compartment_id))
 
-    # # Load the model
-    # model_c = rpSBML.cobraize(model)
-
     # # NOTE: reactions is organised with key being the rpsbml reaction and value being the rpsbml_gem value`
     # # BUG: when merging the rxn_sink (very rare cases) can be recognised if another reaction contains the same species as a reactant
     # ## under such as scenario the algorithm will consider that they are the same -- TODO: overwrite it
