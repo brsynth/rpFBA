@@ -31,9 +31,9 @@ Advanced options:
 * **output**: (string) Path to the output file
 
 
-# Installation Guide
+## Installation Guide
 
-## Overview
+### Overview
 
 `rpthermo` depends on `rplibs`, which depends on `cobra`, which requires `python-libsbml`.  
 On Apple Silicon (`arm64`) macOS, `python-libsbml` is not available as a native Conda package.
@@ -42,22 +42,22 @@ Therefore, installation must be done using an **Intel (`osx-64`) Conda environme
 
 ---
 
-## General case
+### General case
 ```bash
 conda install -c conda-forge rpthermo
 ```
 
 ---
 
-## Apple Silicon macOS (M1/M2/M3)
+### Apple Silicon macOS (M1/M2/M3)
 
-### 1. Install Rosetta 2
+#### 1. Install Rosetta 2
 
 ```bash
 softwareupdate --install-rosetta --agree-to-license
 ```
 
-### 2. Install
+#### 2. Install
 
 ```bash
 CONDA_SUBDIR=osx-64 conda install -c conda-forge rpfba
@@ -69,19 +69,19 @@ Or with mamba:
 CONDA_SUBDIR=osx-64 mamba install -c conda-forge rpfba
 ```
 
-### 3. Persist platform setting
+#### 3. Persist platform setting
 
 ```bash
 conda config --env --set subdir osx-64
 ```
 
-### 4. Verify installation
+#### 4. Verify installation
 
 ```bash
 python -c "import rpfba; print('rpfba installed successfully')"
 ```
 
-### 5. (Optional) Dev installation
+#### 5. (Optional) Dev installation
 
 ```bash
 CONDA_SUBDIR=osx-64 conda env create -f environment.yaml
@@ -89,9 +89,9 @@ CONDA_SUBDIR=osx-64 conda env create -f environment.yaml
 
 ---
 
-## Troubleshooting
+### Troubleshooting
 
-### Solver fails on Apple Silicon
+#### Solver fails on Apple Silicon
 
 Make sure you are using:
 
@@ -99,7 +99,7 @@ Make sure you are using:
 CONDA_SUBDIR=osx-64
 ```
 
-### Wrong architecture environment
+#### Wrong architecture environment
 
 Check:
 
@@ -113,7 +113,7 @@ Expected output:
 subdir: osx-64
 ```
 
-### Run
+## Run
 
 ### rpFBA process
 **From Python code**
